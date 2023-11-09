@@ -16,7 +16,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerImage = docker.build dockerimagename
+                    sh "docker build -t zakyfatih/nodeapp ."
                 }
             }
         }
